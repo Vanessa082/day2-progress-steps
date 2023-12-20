@@ -14,7 +14,6 @@
 body {
   background-color: #f6f7fb;
   font-family: "Muli", sans-serif;
-  font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,8 +39,9 @@ body {
   content: "";
   background-color: #c0c0c0;
   position: absolute;
-  top: 50px;
-  transform: translate(-50%);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   height: 4px;
   width: 100%;
   z-index: -1;
@@ -50,7 +50,8 @@ body {
 .progress {
   background-color: #3498db;
   position: absolute;
-  top: 50px;
+  top: 50%;
+  left: 0;
   transform: translate(-50%);
   height: 4px;
   width: 0%;
@@ -84,4 +85,17 @@ body {
   padding: 8px 30px;
   margin: 5px;
   font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
 }
